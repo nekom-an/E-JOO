@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<title>e-Joo</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/fontawesome-all.min.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
+</head>
+<body class="is-preload">
+<!-- header -->
+<header id="topnav" class="alt">
+  <h1><a href="/">e--Joo</a></h1>
+  <nav id="nav">
+    <ul>
+      <li class="special"> <a href="#menu" class="menuToggle"><span>Menu</span></a>
+        <div id="menu">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/details/">details</a></li>
+            <li><a href="/about/">about</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+            <!-- maincontents -->
+			{%- block content %}{% endblock %}	
+<!-- footer -->
+<section id="footer">
+  <footer>
+    <ul class="copyright">
+      <li>&copy; e--joo　all rights reserved.</li>
+    </ul>
+  </footer>
+  <div id="totop" style="position: fixed;"> <a href="#pagetop"> <i class="icon solid fa-angle-up"></i> </a> </div>
+</section>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/jquery.scrollex.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/jquery.scrolly.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/scroll.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/browser.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/breakpoints.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/util.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/main.js') }}"></script>
+</body>
+</html>

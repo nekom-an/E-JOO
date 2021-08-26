@@ -1,0 +1,443 @@
+{%- extends "layout.html" %}
+{%- block content %}
+<section id="header">
+  <header class="major">
+    <h1><img class="logo" src="{{url_for('static',filename = 'images/logo.png')}}"></h1>
+    <p class="subtitle">［イージュ］へようこそ!</p>
+    <p>周りのと意見があわない…気がついたらひとりで楽しんでる…<br>
+なぜだろう？って思ったことはありませんか？<br>
+もしかしたら…この国より自分に向いた居場所があるのかも！</p>
+    <p>そんなあなたに、お薦め！<br>
+      e--Joo［イージュ］であなたの価値観にぴったりの国を探せます。<br>
+        次のバケーションは、そのまま長期滞在になるかも♪
+</p>
+    <ul class="actions special">
+      <li><a href="#one" class="button primary scrolly">NEXT</a></li>
+    </ul>
+  </header>
+  <div class="container info">
+    <div class="lead">
+      <h3>診断テストを受ける前にお読みください</h3>
+      <p>このテストには６つのセクションがあり、それぞれのセクションに質問が５つ用意されています。<br>
+        各質問の２つの文章のどちらに共感するか…<br>
+        あなたの考えに一番近い答えを５つの選択肢から選んでください。</p>
+    </div>
+  </div>
+</section>
+<form action="/form" method="POST">
+  <!--PID--> 
+  <!--one-->
+  <section id="one" class="main special">
+    <div class="container">
+      <div class="content">
+        <header class="major">
+          <h3>PART-1(PDI)：自分にとって自然な国とは…</h3>
+          <p class="question"><strong>Q1</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="pdi_01" value="2" min="1" max="5" step="1" oninput="document.getElementById('pdi_1').value=this.value">
+          5
+          <output id="pdi_1" name="pdi_01">2</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　子供たちは、自分の意見は親と同じくらい重要であると家庭で教えられる </div>
+          <div class="c_col"></div>
+          <div class="r_col"> <span class="num">B</span>　子供たちは、親の権威は決して問われないものだと家庭で教えられる </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q2</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="pdi_02" value="2" min="1" max="5" step="1" oninput="document.getElementById('pdi_2').value=this.value">
+          5
+          <output id="pdi_2" name="pdi_02">2</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　子供たちは、人生の何ごとも希少であり、当然のことと考えないよう家庭で教育される </div>
+          <div class="c_col"></div>
+          <div class="r_col"> <span class="num">B</span>　子供たちは、年長者や権威者からの声明は受け入れるものと家庭で教えられる </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q3</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="pdi_03" value="3" min="1" max="5" step="1" oninput="document.getElementById('pdi_3').value=this.value">
+          5
+          <output id="pdi_3" name="pdi_03">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　社内で立場が弱い者は、自分の仕事や立ち位置を自分で捜すべきである </div>
+          <div class="c_col"></div>
+          <div class="r_col"> <span class="num">B</span>　社内スタッフおよび従業員の責任は明確に定義されている </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q4</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="pdi_04" value="3" min="1" max="5" step="1" oninput="document.getElementById('pdi_4').value=this.value">
+          5
+          <output id="pdi_4" name="pdi_04">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　上司が部下に判断を問われることがあるのも通常で、誰が指揮をとっているのか従う者なのか区別が難しくなることもある </div>
+          <div class="c_col"></div>
+          <div class="r_col"> <span class="num">B</span>　上司は決断を任されており、部下をこまめに監視している。一方、部下はこれが上司の責任であると受け入れている </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q5</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="pdi_05" value="3" min="1" max="5" step="1" oninput="document.getElementById('pdi_5').value=this.value">
+          5
+          <output id="pdi_5" name="pdi_05">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　政治体制の変化というものは、小さなステップの積み重ねより、また議論と民主的な投票を通じて生まれるものであると見解が多数派である </div>
+          <div class="c_col"></div>
+          <div class="r_col"> <span class="num">B</span>　政治体制の変化は、権力者を入れ替えることで生まれるものだという見方が多数派である </div>
+        </div>
+      </div>
+      <a href="#two" class="goto-next scrolly">Next</a> </div>
+    <!--/container--> 
+  </section>
+  
+  <!-- Two -->
+  <section id="two" class="main special">
+    <div class="container"> <span class="image fit primary"><img src="images/pic02.jpg" alt="" /></span>
+      <div class="content">
+        <header class="major">
+          <h3>PART-2(IDV)：自分にとって住みごこちがよい国とは…</h3>
+          <p class="question"><strong>Q1</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="ivd_01" value="3" min="1" max="5" step="1" oninput="document.getElementById('ivd_1').value=this.value">
+          5
+          <output id="ivd_1" name="ivd_01">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　人々は自分のグループの中に強く永続的な人間関係を持っている </div>
+          <div class="c_col"></div>
+          <div class="r_col"> <span class="num">B</span>　人々は同じような興味や同感を共有するために友達を選ぶ </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q2</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="ivd_02" value="3" min="1" max="5" step="1" oninput="document.getElementById('ivd_2').value=this.value">
+          5
+          <output id="ivd_2" name="ivd_02">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　共同体精神と社会的連帯が優勢 </div>
+          <div class="c_col"></div>
+          <div class="r_col"> <span class="num">B</span>　孤独と自由が優勢 </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q3</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="ivd_03" value="3" min="1" max="5" step="1" oninput="document.getElementById('ivd_3').value=this.value">
+          5
+          <output id="ivd_3" name="ivd_03">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　人々は主に顔を失わないことと他人のそれを維持することに集中する </div>
+          <div class="c_col"></div>
+          <div class="r_col"> <span class="num">B</span>　人々は自分の意見をもつことや自分のなかに基準（判断基準・価値基準など）をつくることに集中する </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q4</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="ivd_04" value="3" min="1" max="5" step="1" oninput="document.getElementById('ivd_4').value=this.value">
+          5
+          <output id="ivd_4" name="ivd_04">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　昇進は、会社に対する忠誠心と年功で与えられる </div>
+          <div class="c_col"></div>
+          <div class="r_col"> <span class="num">B</span>　昇進は、年齢のためではなく、功績にもとづいて付与される </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q5</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="ivd_05" value="3" min="1" max="5" step="1" oninput="document.getElementById('ivd_5').value=this.value">
+          5
+          <output id="ivd_5" name="ivd_05">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　困っている家族の一員が仕事を得るために、地位や権力を利用しない上司は不道徳とみなされる </div>
+          <div class="c_col"></div>
+          <div class="r_col"> <span class="num">B</span>　困っている家族の一員が仕事を得るために地位や権力を利用する上司は不道徳とみなされる </div>
+        </div>
+      </div>
+      <a href="#three" class="goto-next scrolly">Next</a> </div>
+  </section>
+    
+<!-- Three -->
+  <section id="three" class="main special">
+    <div class="container"> <span class="image fit primary"><img src="images/pic02.jpg" alt="" /></span>
+      <div class="content">
+        <header class="major">
+          <h3>PART-3(MAS)：自分にとって住みごこちがよい国とは…</h3>
+          <p class="question"><strong>Q1</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="mas_01" value="3" min="1" max="5" step="1" oninput="document.getElementById('mas_1').value=this.value">
+          5
+          <output id="mas_1" name="mas_01">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　子供たちは、混乱と不確実性の中で生活するよう家庭内で教えられる </div>
+          <div class="c_col"></div>
+          <div class="r_col"><span class="num">B</span>　子供たちは、確実な生活構造を作り出し、不明確な状況を避けるよう家庭内で教えられる </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q2</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="mas_02" value="3" min="1" max="5" step="1" oninput="document.getElementById('mas_2').value=this.value">
+          5
+          <output id="mas_2" name="mas_02">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　一般的な知識を持つ人々は、おおよそどんな状況にも対処するすべを知っているので、重宝されます </div>
+          <div class="c_col"></div>
+          <div class="r_col"><span class="num">B</span>　専門を担当するスペシャリストや有能なリーダーは賞賛されます </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q3</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="mas_03" value="3" min="1" max="5" step="1" oninput="document.getElementById('mas_3').value=this.value">
+          5
+          <output id="mas_3" name="mas_03">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　身分証明書は常時持っている必要はない </div>
+          <div class="c_col"></div>
+          <div class="r_col"><span class="num">B</span>　専身分証明書は常に身から離さず持ち歩くべき</div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q4</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="mas_04" value="3" min="1" max="5" step="1" oninput="document.getElementById('mas_4').value=this.value">
+          5
+          <output id="mas_4" name="mas_04">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　人前で感情を表すべきではない</div>
+          <div class="c_col"></div>
+          <div class="r_col"><span class="num">B</span>　人前でも(適切な場所とタイミングで)感情を表すべきである</div>
+        </div>
+      </div>
+      
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q5</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="mas_05" value="3" min="1" max="5" step="1" oninput="document.getElementById('mas_5').value=this.value">
+          5
+          <output id="mas_5" name="mas_05">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　社会で守らなければいけないルールは、ほんのひと握りだ</div>
+          <div class="c_col"></div>
+          <div class="r_col"><span class="num">B</span>　社会には守らなければならないルールが多い</div>
+        </div>
+      </div>
+      <a href="#four" class="goto-next scrolly">Next</a>
+      </div>
+  </section>
+  
+  <!-- Four -->
+  <section id="four" class="main special">
+    <div class="container"> <span class="image fit primary"><img src="images/pic03.jpg" alt="" /></span>
+      <div class="content">
+        <header class="major">
+          <h3>PART-4(UAI)：自分にとって住みごこちがよい国とは…</h3>
+          <p class="question"><strong>Q1</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="uai_01" value="3" min="1" max="5" step="1" oninput="document.getElementById('uai_1').value=this.value">
+          5
+          <output id="uai_1" name="uai_01">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　人々は、あまり成功しなかった人に同情し、成功者はうらやましく思われる </div>
+          <div class="c_col"></div>
+          <div class="r_col"><span class="num">B</span>　人々は成功者を崇拝し、成功を収めない者には自己のせいだという </div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q2</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="uai_02" value="3" min="1" max="5" step="1" oninput="document.getElementById('uai_2').value=this.value">
+          5
+          <output id="uai_2" name="uai_02">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　仕事に対する意欲は、快適な職場環境と同僚の暖かさ、親しみやすさから生じる</div>
+          <div class="c_col"></div>
+          <div class="r_col"><span class="num">B</span>　仕事に対する意欲は、明確に定義された目標から生じるものであり、責任の所持は功績の証拠である</div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q3</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="uai_03" value="3" min="1" max="5" step="1" oninput="document.getElementById('uai_3').value=this.value">
+          5
+          <output id="uai_3" name="uai_03">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　職場の人々は合意を達成しようと努力し、同僚は互いに対立しない</div>
+          <div class="c_col"></div>
+          <div class="r_col"><span class="num">B</span>　対立はポジティブなものとして評価されており達成につながるものである、対立に向き合うか敗北するかのどちらか</div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q4</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="uai_04" value="3" min="1" max="5" step="1" oninput="document.getElementById('uai_4').value=this.value">
+          5
+          <output id="uai_4" name="uai_04">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　生活のクオリティ（質）について、男女の両方が控えめな考えを持つことができ理解心がある</div>
+          <div class="c_col"></div>
+          <div class="r_col"><span class="num">B</span>　男性は物質的な成功を追求し、女性は生活の質について控えめな考えを持って理解心がある</div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>Q5</strong></p>
+        </header>
+        <div class="slide_cont mgb_2">
+          <label class="range-example"><span class="num">1.</span>Aに強く共感する　<span class="num">2.</span>Aに共感する　<span class="num">3.</span>どちらともいえない　<span class="num">4.</span>Bに共感する　<span class="num">5.</span>Bに強く共感する</label>
+          1
+          <input type="range" name="uai_05" value="3" min="1" max="5" step="1" oninput="document.getElementById('uai_5').value=this.value">
+          5
+          <output id="uai_5" name="uai_05">3</output>
+        </div>
+        <div class="wrap_col">
+          <div class="l_col"> <span class="num">A</span>　愛とは親密さを意味する</div>
+          <div class="c_col"></div>
+          <div class="r_col"><span class="num">B</span>　社会には守らなければならないルールが多い</div>
+        </div>
+      </div>
+      <hr>
+      <!-- 区切り線　-->
+      
+      <div class="col-12">
+        <ul class="actions special">
+          <li>
+            <input type="submit" value="GO!!!　e--Joo!" class="primary" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</form>
+{%- endblock %}

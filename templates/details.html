@@ -1,0 +1,105 @@
+{%- extends "layout.html" %}
+{%- block content %}
+<section id="header">
+  <header class="major sub">
+    <h1 class="schd"><img class="logo" src="{{url_for('static',filename = 'images/logo.png')}}"></h1>
+        <div class="t_small">イージュ</div>
+      
+    <p class="subtitle">KURONEKO さんの診断結果は…</p>
+
+    <ul class="actions special">
+      <li><a href="#one" class="button primary scrolly">NEXT</a></li>
+    </ul>
+  </header>
+  <div class="container info">
+    <div class="result">
+      <h3>あなたの傾向は…</h3>
+      <div class="row">
+          <div class="col-5"><img class="spider_b" src="{{url_for('static',filename = 'images/bel_spider.png')}}"></div>
+          <div class="col-7">
+          <ul class="explain">
+              <li><strong>PDI</strong>　パワーの使い方：権力格差</li>
+              <li><strong>IDV</strong>　アイデンティティ：集団主義／個人主義</li>
+              <li><strong>MAS</strong>　目的は達成すべきものか、それとも？：男性性／女性性</li>
+              <li><strong>UAI</strong>　不確実な未知の出来事に対する対処法：不確実性の回避</li>
+              <li><strong>LTO</strong>　今すぐ結果を求めるのか、先を見据えて投資するのか:短期志向/長期志向</li>
+              <li><strong>IVR</strong>　幸福感が決める社会のあり方：人生の楽しみ方</li>
+              </ul></div>
+        </div>
+    </div>
+      
+  </div>
+</section>
+<!--one-->
+<section id="one" class="main special">
+  <div class="container">
+    <div class="content">
+      <div class="result">
+        <div class="graph_bar"><img src="{{url_for('static',filename = 'images/bel_bar.png')}}"></div>
+        
+    </div>
+    
+    </div>
+<!--
+    <a href="#two" class="goto-next scrolly">Next</a> -->
+    </div>
+  <!--/container--> 
+</section>
+
+  <!--one-->
+  <section id="one" class="main special">
+    <div class="container">
+      <div class="content">
+        <header class="major">
+          <h3>---あなたにおすすめのTOP3---</h3>
+          <p class="question"><strong>TOP1　＜ベルギー＞</strong></p>
+        </header>
+        <div class="row recommend">
+            <div class="col-4"><img class="spider_s" src="{{url_for('static',filename = 'images/bel_spider.png')}}"></div>
+          <div class="col-4"><img class="bn_s" src="{{url_for('static',filename = 'images/bel_bn.png')}}"></div>
+            <div class="col-4"><img class="bar_s" src="{{url_for('static',filename = 'images/bel_bar.png')}}"></div>
+        </div>
+      
+      </div>
+<!--
+      <a href="#two" class="goto-next scrolly">Next</a> -->
+      </div>
+    <!--/container--> 
+  </section>
+  <!--two-->
+  <section id="two" class="main special">
+    <div class="container">
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>TOP2　＜スロヴァキア＞</strong></p>
+        </header>
+        <div class="row recommend">
+          <div class="col-4"><img class="spider_s" src="{{url_for('static',filename = 'images/slk_spider.png')}}"></div>
+          <div class="col-4"><img class="bn_s" src="{{url_for('static',filename = 'images/slk_bn.png')}}"></div>
+            <div class="col-4"><img class="bar_s" src="{{url_for('static',filename = 'images/skl_bar.png')}}"></div>
+        </div>
+      </div>
+<!--
+      <a href="#two" class="goto-next scrolly">Next</a> -->
+      </div>
+    <!--/container--> 
+  </section>
+        <!--three-->
+  <section id="three" class="main special">
+    <div class="container">
+      <div class="content">
+        <header class="major">
+          <p class="question"><strong>TOP2　＜メキシコ＞</strong></p>
+        </header>
+        <div class="row recommend">
+          <div class="col-4"><img class="spider_s" src="{{url_for('static',filename = 'images/mex_spider.png')}}"></div>
+          <div class="col-4"><img class="bn_s" src="{{url_for('static',filename = 'images/mex_bn.png')}}"></div>
+            <div class="col-4"><img class="bar_s" src="{{url_for('static',filename = 'images/mex_bar.png')}}"></div>
+        </div>
+      </div>
+<!--
+      <a href="#two" class="goto-next scrolly">Next</a> -->
+      </div>
+    <!--/container--> 
+  </section>
+{%- endblock %}
